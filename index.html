@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Wheel</title>
+    <link rel="stylesheet" href="./style.css">  
+</head>
+<body>
+    <div class="table">
+        <div class="deck">
+          <div class="card" style="--i:0;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>1</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/1.jpg" alt="Card 1">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:1;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>2</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/2.jpg" alt="Card 2">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:2;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>3</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/3.jpg" alt="Card 3">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:3;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>4</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/4.jpg" alt="Card 4">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:4;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>5</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/5.jpg" alt="Card 5">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:5;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>6</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/6.jpg" alt="Card 6">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:6;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>7</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/7.jpg" alt="Card 7">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:7;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>8</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/8.jpg" alt="Card 8">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:8;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>9</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/9.jpg" alt="Card 9">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:9;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>10</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/10.jpg" alt="Card 10">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:10;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>11</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/11.jpg" alt="Card 11">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:11;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>12</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/12.jpg" alt="Card 12">
+              </div>
+            </div>
+          </div>
+          <div class="card" style="--i:12;">
+            <div class="card-card">
+              <div class="card-front" onclick="flipFront(event)">
+                <h1>13</h1>
+              </div>
+              <div class="card-back" onclick="flipBack(event)">
+                <img src="./media/13.jpg" alt="Card 13">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <button id="distributeBtn" onclick="distributeCards()">Distribute</button>
+    <div class="pdiv">
+      <h3 data-text="Ata tumio jano j ata amar favvvvv babyyyy I Love You ❤️❤️❤️" class="p" id="p1">Ata tumio jano j ata amar favvvvv babyyyy I Love You ❤️❤️❤️</h3>
+      <h3 data-text="Dekhte bou bou kintu mast bhau bhau Besh jute gamee kapal Dekhte bou bou kintu mast bhau bhau Fese gachhi aami acale" class="p" id="p2">Dekhte bou bou kintu mast bhau bhau Besh jute gamee kapal Dekhte bou bou kintu mast bhau bhau Fese gachhi aami acale</h3>
+      <h3 data-text="Isssss ki sundor dekhte tmy najar na lagjay 🧿❤️" class="p" id="p3">Isssss ki sundor dekhte tmy najar na lagjay 🧿❤️</h3>
+      <h3 data-text="Uffff gal ta ki noromm ahhhhhhhhhh😫😫😫😫😫😫😫😫😫😫😫😫" class="p" id="p4">Uffff gal ta ki noromm ahhhhhhhhhh😫😫😫😫😫😫😫😫😫😫😫😫</h3>
+      <h3 data-text="Ata dekhe to j keu pagol hye jabe goooooo 🔥🔥🔥❤️❤️❤️" class="p" id="p5">Ata dekhe to j keu pagol hye jabe goooooo 🔥🔥🔥❤️❤️❤️</h3>
+      <h3 data-text="chobi ta jani sei amar tule deya bole nh tmr sei sei sei sei  dekhte tai ❤️❤️❤️❤️❤️" class="p" id="p6">Hchobi ta jani sei amar tule deya bole nh tmr sei sei sei sei  dekhte tai 🔥🔥🔥🔥🔥🔥 </h3>
+      <h3 data-text="Sareeee pore ki lagche meye ki ahaaa 😘❤️🔥" class="p" id="p7">Sareeee pore ki lagche meye ki ahaaa 😘❤️🔥</h3>
+      <h3 data-text="ufff baby ami r ki bolbo joto gulo heart okhane tmr mathar upor ache sob kotai amr ato gulo mon diye diyechi tmy 😫😫😫😫😫❤️❤️❤️❤️" class="p" id="p8">ufff baby ami r ki bolbo joto gulo heart okhane tmr mathar upor ache sob kotai amr ato gulo mon diye diyechi tmy 😫😫😫😫😫❤️❤️❤️❤️</h3>
+      <h3 data-text="Ki cute dekhte dekho aka ami akdin na dekhe thakbo ki kore 😫😫😫😫😫" class="p" id="p9">Ki cute dekhte dekho aka ami akdin na dekhe thakbo ki kore 😫😫😫😫😫</h3>
+      <h3 data-text="Baccha baccha lagche ki sundor akhon o baccha seta alada but ata o 😘❤️❤️❤️❤️❤️" class="p" id="p10">Baccha baccha lagche ki sundor akhon o baccha seta alada but ata o 😘❤️❤️❤️❤️❤️</h3>
+      <h3 data-text="Ata to puro agun sona j keu jole jabe 🔥🔥🔥❤️❤️❤️" class="p" id="p11">Ata to puro agun sona j keu jole jabe 🔥🔥🔥❤️❤️❤️</h3>
+      <h3 data-text="Ufffffffffffffffff ki sexyyyyyyyyyy 😫😫😫😫😫😫😫😫😫😫❤️❤️❤️❤️❤️❤️❤️❤️❤️" class="p" id="p12">Ufffffffffffffffff ki sexyyyyyyyyyy 😫😫😫😫😫😫😫😫😫😫❤️❤️❤️❤️❤️❤️❤️❤️❤️</h3>
+      <h3 data-text="Ata to akhane rakhtei hoto amar ph a tmr aka r first pic ❤️❤️❤️❤️❤️❤️❤️❤️" class="p" id="p13">Ata to akhane rakhtei hoto amar ph a tmr aka r first pic ❤️❤️❤️❤️❤️❤️❤️❤️</h3>
+    </div>
+    <br>
+    <div class="butact">
+      <button id="action1" class="action" onclick="incrementIndex()" oncontextmenu="dev()">Next</button>
+      <button id="action2" class="action" onclick="ineg()" >Previous</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

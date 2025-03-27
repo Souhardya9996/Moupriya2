@@ -1,0 +1,203 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background-color, #2a2a2a);
+    color: white;
+    overflow: hidden;
+    transition: background-color 2s ease-in-out;
+}
+
+.table {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deck {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    background: black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 1s ease-out, opacity 0.5s ease-in;
+}
+
+/* Step 1: Circular wheel effect */
+.distributed .card {
+    transform: rotate(calc(var(--i) * 27.69230769230769deg)) translate(250px) rotate(calc(var(--i) * -27.69230769230769deg));
+    opacity: 1;
+}
+
+/* Step 2: Expand wheel and show only 1 card */
+.expanded .card {
+    transform: rotate(calc(var(--i) * 27.69230769230769deg)) translate(500px) rotate(calc(var(--i) * -27.69230769230769deg));
+    opacity: 0;
+}
+.pdiv{
+    display: inline-block;
+    letter-spacing: 10px;
+    justify-content: space-between;
+    height: 90px;
+    overflow: hidden;
+    align-items: center;
+}
+.p{
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    width:100%;
+    scroll-snap-stop: never;
+    text-align: center;
+    font-size: 3em;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 20px #ff005b;
+    color:#000;
+    margin-inline: auto;
+    white-space: wrap;
+    border-right: 1px solid ;
+}
+p::after{
+    content: attr(data-text);
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    z-index: -1;
+    color: #ff005b;
+}
+p::before{
+    content: attr(data-text);
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    z-index: -2;
+    color: #fe3a80;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.action {
+    display: none;
+}
+
+.card-card{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    border-radius: 5px;
+}
+.card-card.deflipped {
+    transform: rotateY(0deg);
+    background-color: yellow;
+    border-radius: 5px;
+}
+.card-card.flipped {
+    transform: rotateY(180deg);
+    background-color: yellow;
+    border-radius: 5px;
+}
+.card-front,
+.card-back {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.card-front {
+  background-color: #000;
+  color: #fff;
+}
+
+.card-back {
+  background-color: #000;
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 1em;
+}
+
+.card-back img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+.card-back img:hover {
+    box-shadow: 0px 2px 100px black;
+}
+.card-card:hover {
+    margin-bottom:200px;
+    box-shadow: 0px 2px 100px black;
+}
+.card-front:hover {
+    margin-bottom:200px;
+    box-shadow: 0px 2px 100px black;
+}
+.butact{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 20vw;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+@keyframes spreadFromCard {
+    0% {
+        background-color: var(--background-color, #2a2a2a);
+    }
+    100% {
+        background-color: var(--spread-color, red); /* Use CSS variable for the spread color */
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+@keyframes blink {
+    50% { border-color: transparent }
+}
